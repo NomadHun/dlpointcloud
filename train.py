@@ -20,8 +20,8 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--gpu', type=int, default=0, help='GPU to use [default: GPU 0]')
 parser.add_argument('--log_dir', default='log', help='Log dir [default: log]')
 parser.add_argument('--num_point', type=int, default=4096, help='Point number [default: 4096]')
-parser.add_argument('--max_epoch', type=int, default=15, help='Epoch to run [default: 50]')
-parser.add_argument('--batch_size', type=int, default=9, help='Batch Size during training [default: 24]')
+parser.add_argument('--max_epoch', type=int, default=10, help='Epoch to run [default: 50]')
+parser.add_argument('--batch_size', type=int, default=44, help='Batch Size during training [default: 24]')
 parser.add_argument('--learning_rate', type=float, default=0.001, help='Initial learning rate [default: 0.001]')
 parser.add_argument('--momentum', type=float, default=0.9, help='Initial learning rate [default: 0.9]')
 parser.add_argument('--optimizer', default='adam', help='adam or momentum [default: adam]')
@@ -60,8 +60,8 @@ BN_DECAY_CLIP = 0.99
 
 HOSTNAME = socket.gethostname()
 
-ALL_FILES = provider.getDataFiles('indoor3d_sem_seg_hdf5_data/all_files.txt')
-room_filelist = [line.rstrip() for line in open('indoor3d_sem_seg_hdf5_data/room_filelist.txt')]
+ALL_FILES = provider.getDataFiles('TUM_sem_seg_hdf5_data/all_files.txt')
+room_filelist = [line.rstrip() for line in open('TUM_sem_seg_hdf5_data/campus_filelist.txt')]
 
 # Load ALL data
 data_batch_list = []
@@ -76,7 +76,7 @@ label_batches = np.concatenate(label_batch_list, 0)
 print(data_batches.shape)
 print(label_batches.shape)
 
-test_area = 'Area_'+str(FLAGS.test_area)
+test_area = 'Test_1_Building_'+str(FLAGS.test_area)
 train_idxs = []
 test_idxs = []
 for i,room_name in enumerate(room_filelist):
