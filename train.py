@@ -60,8 +60,8 @@ BN_DECAY_CLIP = 0.99
 
 HOSTNAME = socket.gethostname()
 
-ALL_FILES = provider.getDataFiles('TUM_sem_seg_hdf5_data/all_files.txt')
-room_filelist = [line.rstrip() for line in open('TUM_sem_seg_hdf5_data/campus_filelist.txt')]
+ALL_FILES = provider.getDataFiles('TUM_sem_seg_hdf5_data_small/all_files.txt')
+room_filelist = [line.rstrip() for line in open('TUM_sem_seg_hdf5_data_small/campus_filelist.txt')]
 
 # Load ALL data
 data_batch_list = []
