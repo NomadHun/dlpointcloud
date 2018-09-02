@@ -1,0 +1,82 @@
+Namespace(batch_size=6, decay_rate=0.5, decay_step=300000, gpu=0, learning_rate=0.001, log_dir='log2', max_epoch=10, momentum=0.9, num_point=4096, optimizer='adam', test_area=2)
+**** EPOCH 000 ****
+----
+mean loss: 0.019495
+accuracy: 0.996779
+----
+eval mean loss: 0.000192
+eval accuracy: 1.000000
+eval avg class acc: nan
+Model saved in file: log2/model.ckpt
+**** EPOCH 001 ****
+----
+mean loss: 0.000196
+accuracy: 1.000000
+----
+eval mean loss: 0.000056
+eval accuracy: 1.000000
+eval avg class acc: nan
+**** EPOCH 002 ****
+----
+mean loss: 0.000073
+accuracy: 1.000000
+----
+eval mean loss: 0.000025
+eval accuracy: 1.000000
+eval avg class acc: nan
+**** EPOCH 003 ****
+----
+mean loss: 0.000035
+accuracy: 1.000000
+----
+eval mean loss: 0.000012
+eval accuracy: 1.000000
+eval avg class acc: nan
+**** EPOCH 004 ****
+----
+mean loss: 0.000020
+accuracy: 1.000000
+----
+eval mean loss: 0.000007
+eval accuracy: 1.000000
+eval avg class acc: nan
+**** EPOCH 005 ****
+----
+mean loss: 0.000012
+accuracy: 1.000000
+----
+eval mean loss: 0.000004
+eval accuracy: 1.000000
+eval avg class acc: nan
+**** EPOCH 006 ****
+----
+mean loss: 0.000007
+accuracy: 1.000000
+----
+eval mean loss: 0.000002
+eval accuracy: 1.000000
+eval avg class acc: nan
+**** EPOCH 007 ****
+----
+mean loss: 0.000004
+accuracy: 1.000000
+----
+eval mean loss: 0.000001
+eval accuracy: 1.000000
+eval avg class acc: nan
+**** EPOCH 008 ****
+----
+mean loss: 0.000003
+accuracy: 1.000000
+----
+eval mean loss: 0.000001
+eval accuracy: 1.000000
+eval avg class acc: nan
+**** EPOCH 009 ****
+----
+mean loss: 0.000002
+accuracy: 1.000000
+----
+eval mean loss: 0.000001
+eval accuracy: 1.000000
+eval avg class acc: nan
