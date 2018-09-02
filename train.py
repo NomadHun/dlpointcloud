@@ -21,13 +21,13 @@ parser.add_argument('--gpu', type=int, default=0, help='GPU to use [default: GPU
 parser.add_argument('--log_dir', default='log', help='Log dir [default: log]')
 parser.add_argument('--num_point', type=int, default=4096, help='Point number [default: 4096]')
 parser.add_argument('--max_epoch', type=int, default=10, help='Epoch to run [default: 50]')
-parser.add_argument('--batch_size', type=int, default=6, help='Batch Size during training [default: 24]')
+parser.add_argument('--batch_size', type=int, default=8, help='Batch Size during training [default: 24]')
 parser.add_argument('--learning_rate', type=float, default=0.001, help='Initial learning rate [default: 0.001]')
 parser.add_argument('--momentum', type=float, default=0.9, help='Initial learning rate [default: 0.9]')
 parser.add_argument('--optimizer', default='adam', help='adam or momentum [default: adam]')
 parser.add_argument('--decay_step', type=int, default=300000, help='Decay step for lr decay [default: 300000]')
 parser.add_argument('--decay_rate', type=float, default=0.5, help='Decay rate for lr decay [default: 0.5]')
-parser.add_argument('--test_area', type=int, default=2, help='Which area to use for test, option: 1-6 [default: 6]')
+parser.add_argument('--test_area', type=int, default=4, help='Which area to use for test, option: 1-6 [default: 6]')
 FLAGS = parser.parse_args()
 
 
@@ -60,8 +60,8 @@ BN_DECAY_CLIP = 0.99
 
 HOSTNAME = socket.gethostname()
 
-ALL_FILES = provider.getDataFiles('TUM_sem_seg_hdf5_data_small/all_files.txt')
-room_filelist = [line.rstrip() for line in open('TUM_sem_seg_hdf5_data_small/campus_filelist.txt')]
+ALL_FILES = provider.getDataFiles('TUM_sem_seg_hdf5_data_model_4/all_files.txt')
+room_filelist = [line.rstrip() for line in open('TUM_sem_seg_hdf5_data_model_4/campus_filelist.txt')]
 
 # Load ALL data
 data_batch_list = []
